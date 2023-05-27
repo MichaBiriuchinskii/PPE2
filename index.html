@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Programmation et Projet Encadré 2</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body class="has-navbar-fixed-top">
+		<!--NAVBAR-->
+		<nav class="navbar is-light is-fixed-top">
+			<div class="navbar-menu">
+				<div class="navbar-start">
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-item" href="#introduction">Introduction</a>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-item" href="#analyse">Analyse</a>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-item" href="scripts.html">Scripts</a>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-item">Visualisations</a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="visualization/idees_societe.html">
+							  Idées Société
+							</a>
+							<a class="navbar-item" href="visualization/politique_economie.html">
+							  Politique Économie
+							</a>
+							<a class="navbar-item" href="visualization/planete_voyage.html">
+							  Planète Voyage
+							</a>
+						  </div>
+					</div>
+				</div>
+				<div class="navbar-end">
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-item" href="#aPropos">À propos</a>
+					</div>
+					<div class="navbar-item">
+						<a href="https://gitlab.com/cbuontal/ppe2-totally_spies"><img src="images/gitlab_logo.png" alt="Gitlab"></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--HEADER-->
+		<header style="background-color: #06213e;">
+			<h1 class="title has-text-centered" style="color: #ffffff; font-size: 40px; letter-spacing: -0.02em; font-variant-caps: small-caps;">Programmation et Projet Encadré 2 :<br/>Topic Modeling</h1>
+		</header>
+		<!--CONTENU-->
+		<div class="has-text-justified", style="background-color: white;">
+			<!--introduction-->
+			<h1 class="title has-text-centered" id="introduction" style="color: #a92927; font-size: 40px; letter-spacing: -0.02em; font-variant-caps: small-caps;">Introduction</h1>
+			<div class="columns">
+				<div class="column is-one-fifth"></div>
+				<div class="column" style="border-left: 5px solid #a92927;">
+					<p class="block">
+						Dans le cadre du projet de topic modeling, nous avons analysé les archives 2022 du journal Le Monde. Ces archives sont classées en catégories, et nous avons choisi d’explorer les suivantes :
+					</p>
+					<ul style="list-style-type: disc; margin-left: 50px; margin-bottom: 25px;">
+						<li>idées et société, trankit, xml,</li>
+						<li>politique et économie, spacy, pickle,</li>
+						<li>planète et voyage, stanza, json.</li>
+					</ul>
+					<p class="block">
+						Pour chaque analyse, nous avons utilisé l’algorithme Latent Dirichlet Association (LDA) avec la bibliothèque Python gensim. Les visualisations ont été générées avec le module pyLADvis. Nous présentons les résultats de notre travail sur cette page.
+					</p>
+					<p class="block">
+						Dans le cadre de notre projet d'analyse des mots dans les articles, nous avons examiné un corpus d'articles du journal Le Monde portant sur la politique et l'économie. Grâce à l'utilisation du module de visualisation pyLDAvis, nous avons identifié cinq thèmes principaux ainsi qu'une liste des termes les plus fréquemment utilisés.
+					</p>
+				</div>
+				<div class="column is-one-fifth"></div>
+			</div>
+			<!--analyse-->
+			<h1 class="title has-text-centered" id="analyse" style="color: #a92927; font-size: 40px; letter-spacing: -0.02em; font-variant-caps: small-caps;">Analyse</h1>
+			<div class="columns">
+				<div class="column is-one-fifth"></div>
+				<div class="column" style="border-left: 5px solid #a92927;">
+					<!--analyse 1-->
+					<h2 class="title has-text-centered" style="color: #06213e; font-size: 32px; letter-spacing: -0.02em;">Idées et société</h2>
+					<p class="block">
+						- Thème 1 et 2 : Réflexion sur le pouvoir exécutif
+					</p>
+					<p class="block">
+						Les mots représentatifs sont surtout ‘tribune’ et ‘politique’, qui indiquent à la fois le genre textuel et le thème du contenu. Les verbes ‘devoir’, ‘pouvoir’ et le nom ‘etat’ nous indiquent qu’il s’agit de réflexion sur le pouvoir étatique et les objectifs à atteindre pour le gouvernement. Ce thème était attendu puisque 2022 était une année d’élection présidentielle.
+					</p>
+					<p class="block">
+						- Thème 3 : Violences faites aux femmes
+					</p>
+					<p class="block">
+						Il s’agit de contenu au sujet des violences faites aux femmes. Avec les mots-clés ‘enquête’ et ‘affaire’, on voit qu’il s’agit de faits divers. Il est question de ‘violence’, de ‘plainte’ notamment à propos de ‘viol’. Cela fait écho à l’importance croissante des questions féministes dans la société.
+					</p>
+					<p class="block">
+						- Thème 4 : Influence de la guerre russo-ukrainienne sur l’élection
+					</p>
+					<p class="block">
+						Les belligérants sont clairement désignés par ‘russe’ et ‘ukrainien’, et le lexique des élections est très présent : ‘candidat’, ‘tour’, ‘campagne’, ‘marine’. Il peut s’agir des relations d’influence entre la candidate Marine Le Pen et la Russie.
+					</p>
+					<p class="block">
+						- Thème 5 : Affaire judiciaire contre un dessinateur
+					</p>
+					<p class="block">
+						Ce thème fait allusion à l’actualité judiciaire : ‘procès’, ‘prison’, ‘avocat’, ‘condamner’... Il s’agit du procès du 13 Novembre, au cours duquel la justice a condamné les anciens djihadistes le 29 juin 2022. On peut identifier cet événement avec ‘attentat’ et ‘novembre’.
+					</p>
+					<!--analyse 2-->
+					<h2 class="title has-text-centered" style="color: #06213e; font-size: 32px; letter-spacing: -0.02em;">Politique et économie</h2>
+					<p class="block">
+						- Thème 1 : Politique et élections
+					</p>
+					<p class="block">
+						Ce thème semble aborder des sujets liés à la politique, tels que les élections présidentielles et législatives, les décisions politiques, les dénonciations, les prises de position, qui peut-être expliqué par la compagne éléctorale menée en France en 2022.
+					</p>
+					<p class="block">
+						- Thème 2 : Économie et environnement
+					</p>
+					<p class="block">
+						Ce thème se concentre sur des sujets économiques tels que les politiques publiques, l'économie nationale et européenne, ainsi que des aspects liés à l'environnement, tels que les enjeux climatiques, les politiques énergétiques, etc.
+					</p>
+					<p class="block">
+						- Thème 3 : Processus décisionnels
+					</p>
+					<p class="block">
+						Ce thème aborde les processus décisionnels, les prises de décision et les actions à entreprendre. On y trouve des mots tels que "mettre", "voter", "présenter", "choisir", "agir", etc.
+					</p>
+					<p class="block">
+						- Thème 4 : Évolution et changements
+					</p>
+					<p class="block">
+						Ce thème semble traiter de l'évolution, des changements et des évolutions prévus ou en cours. On y trouve des termes tels que "augmenter", "atteindre", "organiser", "progresser", etc.
+					</p>
+					<p class="block">
+						- Thème 5 : Questions internationales
+					</p>
+					<p class="block">
+						Ce thème concerne des sujets internationaux, tels que les questions financières, les relations avec la Russie, les enjeux territoriaux, etc.
+					</p>
+					<!--analyse 3-->
+					<h2 class="title has-text-centered" style="color: #06213e; font-size: 32px; letter-spacing: -0.02em;">Planète et voyage</h2>
+					<p class="block">
+						- Thème 1 : Actions et décisions
+					</p>
+					<p class="block">
+						Ce thème est caractérisé par des mots tels que "faire", "devoir", "prendre", "discuter", "rêver" ou encore "renouveler". Il semble se concentrer sur des actions à entreprendre, des décisions à prendre et des discussions à mener. On peut l’associer à des sujets tels que la planification, l'engagement, les choix et les aspirations.
+					</p>
+					<p class="block">
+						- Thème 2 : Déplacements et interactions
+					</p>
+					<p class="block">
+						Ce thème est marqué par des mots comme "aller", "répondre", "utiliser", "accueillir"ou encore "voyager". Il suggère des déplacements physiques, des interactions sociales et des actions liées au mouvement. On peut le lier à des sujets tels que les voyages, les rencontres, les activités sociales et les déplacements physiques. On peut aussi noter son extrême proximité avec le - Thème 1. Les deux thèmes étant assez généraux, particulièrement au vu des thématiques abordées dans les catégories traitées, il n’est pas surprenant de les voir ensemble.
+					</p>
+					<p class="block">
+						- Thème 3 : Pouvoir et influence
+					</p>
+					<p class="block">
+						Ce thème est caractérisé par des mots tels que "pouvoir", "mettre", "attendre", "peser" ou encore "établir". Il met l'accent sur le pouvoir, l'autorité et l'influence. Les mots associés à ce thème suggèrent des actions liées à l'établissement de normes, à l'exercice du pouvoir et à l'obtention de résultats. Ce thème peut être associé à des sujets tels que la gouvernance, l'autorité, la négociation et l'influence.
+					</p>
+					<p class="block">
+						- Thème 4 : Changement et adaptation
+					</p>
+					<p class="block">
+						Ce thème est marqué par des mots tels que "pencher", "permettre", "multiplier", "réunir" ou encore "gagner". Il évoque des actions liées à l'évolution, au changement et à l'adaptation. Les termes associés à ce thème suggèrent des efforts pour améliorer, développer ou transformer quelque chose. Il peut être lié à des sujets tels que l'innovation, l'amélioration, l'adaptabilité et le développement.
+					</p>
+					<p class="block">
+						- Thème 5 : Observation et réaction
+					</p>
+					<p class="block">
+						Ce thème est caractérisé par des mots tels que "mener", "reprendre", "écouter", "dramatiser" ou encore "connaître". Il met en avant des actions liées à l'observation, à l'écoute et à la réaction. Les termes associés à ce thème suggèrent l'importance de l'écoute, de l'observation et de la compréhension dans les actions entreprises. Il peut être lié à des sujets tels que la communication, l'analyse, la réactivité et l'adaptation. On peut remarquer que, quand bien même éloigné du - Thème 3, il se trouve dans la même direction. On peut imaginer la proximité de ces termes par un rapport de cause conséquence, il faut d’abord observer avant d’agir.
+					</p>
+					<!--conclusion-->
+					<h2 class="title has-text-centered" style="color: #06213e; font-size: 32px; letter-spacing: -0.02em;">Conclusion</h2>
+					<p class="block">
+						L'analyse des différents thèmes dans nos recherches met en évidence plusieurs points communs et interactions entre les sujets abordés. Dans les trois recherches menées, nous observons des thèmes liés à la politique, aux décisions, aux changements et aux questions internationales. Cela souligne l'interconnexion complexe entre la politique, l'économie, l'environnement et les débats d’idées.
+					</p>
+					<p class="block">
+						Dans les deux premières recherches, nous constatons une corrélation entre les thèmes liés à la politique et à l'économie. Les décisions politiques ont un impact direct sur les politiques économiques et environnementales, ce qui explique la similitude entre les thèmes abordés. De plus, le thème des questions internationales dans les deux recherches met en évidence l'importance des enjeux mondiaux et des relations internationales dans l'agenda politique.
+					</p>
+					<p class="block">
+						Dans la troisième recherche, bien que les thèmes soient ceux de la planète et du voyage, nous remarquons également des similitudes avec les autres recherches. Les thèmes liés aux actions, aux décisions, au pouvoir, aux changements et aux observations sont présents, soulignant ainsi des préoccupations communes dans différents domaines.
+					</p>
+					<p class="block">
+						En conclusion, nos recherches montrent que les sujets politiques, économiques, environnementaux et les questions internationales sont étroitement liés. Ils reflètent les défis auxquels la société est confrontée, et les débats qu’ils suscitent.
+					</p>
+				</div>
+				<div class="column is-one-fifth"></div>
+			</div>
+			<!--à propos-->
+			<h1 class="title has-text-centered" id="aPropos" style="color: #a92927; font-size: 40px; letter-spacing: -0.02em; font-variant-caps: small-caps;">À propos</h1>
+			<div class="columns">
+				<div class="column is-one-fifth"></div>
+				<div class="column" style="border-left: 5px solid #a92927;">
+					<div class="columns">
+						<div class="column is-1"></div>
+						<div class="column">
+							<h3 class="subtitle has-text-centered" style="background-color: #06213e; color: white;">Clément Buon</h3>
+						</div>
+						<div class="column is-1"></div>
+					</div>
+					<img src="images/profil1.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%; margin-bottom: 25px;" alt="Photo Clément Buon">
+					<p class="block">
+						Suite à sa licence en Mathématiques Appliquées, avec une spécialisation en probabilités, et son parcours en chinois à l'INALCO, il se tourne vers le Traitement Automatique des Langues pour mettre à profit sa polyvalence. Il s'est occupé du formatage XML et de la gestion de l'analyseur syntaxique Trankit. Il analyse les catégories idées et société.
+					</p>
+					<p class="block">
+						Domaines d'intérêt :
+					</p>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Formalisme</li>
+						<li>Machine Learning</li>
+						<li>Informatique musicale</li>
+					</ul>
+					<p class="block" style="margin-top: 20px;">
+						Contacter :
+					</p>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>aubanel.buon[at]gmail.com</li>
+						<li><a href="https://www.linkedin.com/in/cl%C3%A9ment-b-21b4b2158">Linkedin</a></li>
+					</ul>
+				</div>
+				<div class="column" style="margin-left: 50px; margin-right: 50px;">
+					<div class="columns">
+						<div class="column is-1"></div>
+						<div class="column">
+							<h3 class="subtitle has-text-centered" style="background-color: #06213e; color: white;">Mikhail Biriuchinskii</h3>
+						</div>
+						<div class="column is-1"></div>
+					</div>
+					<img src="images/profil2.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%; margin-bottom: 25px;" alt="Photo Mikhail Biriuchinskii">
+					<p class="block">
+						Après avoir obtenu un diplôme de Master en linguistique, il a décidé de lier sa formation à son intérêt pour l'informatique. Il s'est occupé du formatage Pickle et de la gestion de l'analyseur syntaxique Spacy. Il analyse les catégories économie et politique.
+					</p>
+					<p class="block">
+						Domaines d'intérêt :
+					</p>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Synthèse texte-parole</li>
+						<li>Traduction automatique</li>
+						<li>Apprentissage automatique</li>
+					</ul>
+					<p class="block" style="margin-top: 20px;">
+						Contacter :
+					</p>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>m.biriuchinskii[at]mail.ru</li>
+						<li><a href="https://www.linkedin.com/in/michaelonthebeach">Linkedin</a></li>
+					</ul>
+				</div>
+				<div class="column">
+					<div class="columns">
+						<div class="column is-1"></div>
+						<div class="column">
+							<h3 class="subtitle has-text-centered" style="background-color: #06213e; color: white;">Sarah Almeida</h3>
+						</div>
+						<div class="column is-1"></div>
+					</div>
+					<img src="images/profil3.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%; margin-bottom: 25px;" alt="Photo Sarah Almeida">
+					<p class="block">
+						Agée de 22 ans, disposant d'une Licence en Sciences du Langage et étudiant en première année de Master Traitement Automatique des Langues, elle a été amené à travailler sur ce projet d'analyse sur corpus dans le cadre de son cours de PPE. Elle s'est occupé du formatage Json et de la gestion de l'analyseur syntaxique Stanza. Elle analyse les catégories planète et voyage.
+					</p>
+					<p class="block">
+						Domaines d'intérêt :
+					</p>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Programmation</li>
+						<li>Grammaire</li>
+						<li>Traduction automatique</li>
+					</ul>
+					<p class="block" style="margin-top: 20px;">
+						Contacter :
+					</p>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>sarah.almeida-barreto[at]sorbonne-nouvelle.fr</li>
+					</ul>
+				</div>
+				<div class="column is-one-fifth"></div>
+			</div>
+		</div>
+	</body>
+</html>
