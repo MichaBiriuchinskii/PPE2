@@ -12,7 +12,9 @@ Pour chaque analyse, nous avons appliqué l'algorithme Latent Dirichlet Associat
 
 Dans le cadre de notre étude sur les articles portant sur la politique et l'économie, nous avons examiné un corpus spécifique. Grâce à l'utilisation de la visualisation pyLDAvis, nous avons identifié cinq thèmes principaux ainsi qu'une liste des termes les plus fréquemment utilisés.
 
-Pour plus de détails, veuillez consulter le code et les résultats dans ce référentiel GitHub.
+Pour plus de détails, veuillez consulter notre site web : 
+
+SITE
 
 **Note :** Le projet est basé sur l'analyse des archives du journal Le Monde de l'année 2022.
 
